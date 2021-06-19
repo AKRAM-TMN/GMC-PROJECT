@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../CSS/card.css" >  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../PIC/gg.jfif">
+  
+
+
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <title>Shop</title>
+    <script src="../JS/card.js"></script>
+</head>
+<script>
+		
+  function Delete(e){
+    let items = [];
+    JSON.parse(localStorage.getItem('items')).map(data=>{
+      if(data.id != e.parentElement.parentElement.children[0].textContent){
+        
+        items.push(data);
+
+      }
+    });
+    localStorage.setItem('items',JSON.stringify(items));
+    window.location.reload();
+  };
+</script>
+
+
+<body>
+<!--header-->
+
+    <header id="header" class="header">
+        <h1>Game Zone</h1>
+			<div class="iconShopping">
+				<p>0</p>
+				<i class="fa fa-shopping-cart"></i>
+			</div>
+      <div class="out"> 
+        
+        <input type="submit" value="log out" onClick="myFunction()"/> <i class="fas fa-sign-out-alt"></i>
+        <script>
+          function myFunction() {
+            window.location.href="../HTML/log.html";  
+       
+            window.localStorage.removeItem('items');
+           
+          }
+        </script></div>
+
+    </header>
+    <br>
+
+
+    <!--carousel-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../PIC/best-ps5-games-new.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../PIC/3784088-review-hitman3-nologo.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../PIC/demonssouls-review-blogroll-1605559895476_160w.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+      
+
+
+    
+
+    
+
+    
+
+<!--itemsBox-->
+
+    <div class="itemsBox">
+
+    <div class="card" style="width: 18rem;">
+        <img class="image" src="../PIC/battlefield v.jfif" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">battlefield v</h5>
+          <p class="card-text"><span>75</span>DT</p>
+          <button onclick="enzel1()" id="9alb1"><i class="fa fa-heart"></i></button>
+          <a  class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="image" src="../PIC/Grand_Theft_Auto_V.png" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">gta 5</h5>
+          <p class="card-text"><span>95</span>DT</p>
+          <button onclick="enzel2()" id="9alb2"><i class="fa fa-heart"></i></button>
+          <a  class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="image" src="../PIC/rainbow six siege.jfif" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">rainbow six siege</h5>
+          <p class="card-text"><span>45</span>DT</p>
+          <button onclick="enzel3()" id="9alb3"><i class="fa fa-heart"></i></button>
+          <a  class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img class="image" src="../PIC/fifa.jfif" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">fifa 21</h5>
+          <p class="card-text"><span>169</span>DT</p>
+          <button onclick="enzel4()" id="9alb4"><i class="fa fa-heart"></i></button>
+          <a  class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../PIC/PlayerUnknown's_Battlegrounds_Steam_Logo.jpg" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">pubg</h5>
+          <p class="card-text"><span>75</span>DT</p>
+          <button onclick="enzel5()" id="9alb5"><i class="fa fa-heart"></i></button>
+          <a  class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../PIC/220px-Black_Ops_Cold_War.jpeg" alt="Card image cap" width="600" height="300">
+        <div class="card-body">
+          <h5 class="card-title">call of duty black ops cold war</h5>
+          <p class="card-text"><span>220</span>DT</p>
+          <button onclick="enzel6()" id="9alb6"><i class="fa fa-heart"></i></button>
+          <a class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+
+
+
+     
+
+    
+    </div>
+
+
+   
+
+
+  <!--contact-->    
+    <div class="contact"> <div class="facebook"><i class="fab fa-facebook"></i><h3>facebook</h3></div><div class="twitter"><i class="fab fa-twitter-square"></i><h3>twitter</h3></div><div class="steam"><i class="fab fa-steam"></i><h3>steam</h3></div>
+    <P class="creat">this website is created by<BR><B>AKRAM TEMANI</B></P>
+  </div>
+
+
+  
+    <!--cartBox-->
+
+    <div class="cartBox " >
+      <div class="cart">
+        <i class="fa fa-close"></i>
+        <h1>Cart</h1>
+        <br><br>
+        <table border="1"></table>
+      </div>
+    </div>
+
+    <script>
+      var buttonLike1 = document.getElementById('9alb1');
+       function enzel1(){
+         if(buttonLike1.style.color=="red"){
+           buttonLike1.style.color="grey"
+         }
+         else{
+           buttonLike1.style.color="red"
+         }
+       }
+
+       var buttonLike2 = document.getElementById('9alb2');
+       function enzel2(){
+         if(buttonLike2.style.color=="red"){
+           buttonLike2.style.color="grey"
+         }
+         else{
+           buttonLike2.style.color="red"
+         }
+       }
+
+       var buttonLike3 = document.getElementById('9alb3');
+       function enzel3(){
+         if(buttonLike3.style.color=="red"){
+           buttonLike3.style.color="grey"
+         }
+         else{
+           buttonLike3.style.color="red"
+         }
+       }
+
+       var buttonLike4 = document.getElementById('9alb4');
+       function enzel4(){
+         if(buttonLike4.style.color=="red"){
+           buttonLik4.style.color="grey"
+         }
+         else{
+           buttonLike4.style.color="red"
+         }
+       }
+
+       var buttonLike5 = document.getElementById('9alb5');
+       function enzel5(){
+         if(buttonLike5.style.color=="red"){
+           buttonLik5.style.color="grey"
+         }
+         else{
+           buttonLike5.style.color="red"
+         }
+       }
+
+       var buttonLike6 = document.getElementById('9alb6');
+       function enzel6(){
+         if(buttonLike6.style.color=="red"){
+           buttonLik6.style.color="grey"
+         }
+         else{
+           buttonLike6.style.color="red"
+         }
+       }
+
+      
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
